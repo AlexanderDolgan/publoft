@@ -26,11 +26,11 @@
 			& .ic-fb {
 				display: inline-block;
 				margin-right: 2rem;
-				@include retina-sprite($ic-facebook-w-group);
+				// @include retina-sprite($ic-facebook-w-group);
 			}
 			& .ic-in {
 				display: inline-block;
-				@include retina-sprite($ic-instagram-w-group);
+				// @include retina-sprite($ic-instagram-w-group);
 			}
 		}
 	}

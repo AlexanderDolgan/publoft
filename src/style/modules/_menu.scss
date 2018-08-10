@@ -38,11 +38,11 @@
 			vertical-align: middle;
 			margin-top: -1rem;
 			margin-right: 1rem;
-			@include retina-sprite($ic-food-group);
+			// @include retina-sprite($ic-food-group);
 		}
 		& .bar::before {
 			@extend .kitchen::before;
-			@include retina-sprite($ic-drinks-group);
+			// @include retina-sprite($ic-drinks-group);
 		}
 	}
 }

@@ -12,18 +12,9 @@
 	z-index: 9;
 }
 
-.mob-top {
-	& .logo {
-		& img {
-			display: block;
-			max-width: 15rem;
-		}
-	}
-}
-
 // nav open btn
 .nav-open-btn {
-	@include retina-sprite($ic-menu-p-group);
+	@include retina-sprite($ic-menu-group);
 	cursor: pointer;
 	align-self: center;
 }
@@ -37,15 +28,23 @@
 // основная навигация мобильная версия
 .nav-mob {
 	position: absolute;
-	height: 100vh;
 	width: 100vw;
+	max-width: 52rem;
+	height: 100vh;
 	top: 0;
 	left: -100vw;
-	padding: 8rem;
-	background-color: ac(primary);
+	padding: 2rem 10rem;
 	z-index: 10;
+	background: ac(secondary);
+	background: linear-gradient(to bottom, rgba(237,219,189,1) 0%, rgba(216,192,149,1) 100%);
 	transition: .33s left ease-out;
-	overflow-x: scroll;
+	overflow: hidden;
+}
+
+@media (max-height: 52rem) {
+	.nav-mob {
+		overflow-y: scroll;
+	}
 }
 
 .nav-mob ul {
@@ -54,32 +53,101 @@
 	justify-content: space-around;
 	width: 100%;
 	list-style: none;
-	padding: 4rem 0;
+	padding: 0;
 	margin: 0;
-	border-bottom: .4rem solid ac(text);
+	margin-top: 4rem;
 	& li {
 		width: 100%;
+		position: relative;
+		&:first-child {
+			margin-top: 0;
+		}
+		&:nth-child(1)::after {
+			content: '';
+			display: block;
+			@include retina-sprite($ic-home-group);
+			position: absolute;
+			right: 0rem;
+			top: 2.5rem;
+		}
+		&:nth-child(2)::after {
+			content: '';
+			display: block;
+			@include retina-sprite($ic-restaurant-menu-group);
+			position: absolute;
+			right: 0rem;
+			top: 2.5rem;
+		}
+		&:nth-child(3)::after {
+			content: '';
+			display: block;
+			@include retina-sprite($ic-dashboard-group);
+			position: absolute;
+			right: 0rem;
+			top: 2.5rem;
+		}
+		&:nth-child(4)::after {
+			content: '';
+			display: block;
+			@include retina-sprite($ic-subject-group);
+			position: absolute;
+			right: 0rem;
+			top: 2.5rem;
+		}
+		&:nth-child(5)::after {
+			content: '';
+			display: block;
+			@include retina-sprite($ic-place-group);
+			position: absolute;
+			right: 0rem;
+			top: 2.5rem;
+		}
 		& a {
 			display: block;
 			width: 100%;
 			margin-top: 2rem;
-			font-size: 3rem;
-			font-family: 'girottbold', sans-serif;
-			color: ac(text);
+			text-transform: uppercase;
+			font-size: 2rem;
+			color: ac(third);
+			font-family: $second-font-family;
 		}
 	}
 }
 
 .nav-mob .social {
+	border-top: .2rem solid ac(third);
+	padding-top: 4rem;
 	margin-top: 4rem;
+	text-transform: uppercase;
+	& a {
+		color: ac(third);
+		font-family: $second-font-family;
+		font-size: 2rem;
+	}
 	& .ic-fb {
-		display: inline-block;
-		padding-right: 4rem;
-		@include retina-sprite($ic-facebook-group);
+		position: relative;
+		display: block;
+		& span:after {
+			content: '';
+			display: block;
+			@include retina-sprite($ic-facebook-group);
+			position: absolute;
+			right: 0rem;
+			top: 0;
+		}
 	}
 	& .ic-in {
-		display: inline-block;
-		@include retina-sprite($ic-instagram-group);
+		position: relative;
+		display: block;
+		margin-top: 1rem;
+		& span:after {
+			content: '';
+			display: block;
+			@include retina-sprite($ic-instagram-group);
+			position: absolute;
+			right: 0rem;
+			top: 0;
+		}
 	}
 }
 
@@ -87,17 +155,37 @@
 	left: 0;
 }
 
-@media (min-width: $b-medium) {
-	.nav-mob {
-		width: percentage(5/12);
-		box-shadow: 1rem 1rem 2rem rgba(0,0,0,.2);
+.nav-mob .logo {
+	text-align: center;
+	margin-top: 4rem;
+	& img {
+		width: 12.25rem;
 	}
+}
+
+@media (min-width: $b-small) {
 	.nav-mob ul {
-		padding: 5rem 0;
+		margin-top: 8rem;
 		& li {
 			& a {
-				font-size: 3rem;
+				font-size: 2.25rem;
+				margin-top: 3rem;
 			}
+		}
+	}
+	.nav-mob .social {
+		border-top: .2rem solid ac(third);
+		padding-top: 4rem;
+		margin-top: 4rem;
+		& a {
+			font-size: 2rem;
+		}
+	}
+	.nav-mob .logo {
+		text-align: center;
+		margin-top: 4rem;
+		& img {
+			width: 16rem;
 		}
 	}
 }

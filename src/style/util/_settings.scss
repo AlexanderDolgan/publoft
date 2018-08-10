@@ -1,8 +1,8 @@
 @import "mixin";
 
 //Global
-$global-font-family: 'grotesque', sans-serif;
-$second-font-family: 'girottbold', sans-serif;
+$global-font-family: 'PFDinTextCompPro-Regular', sans-serif;
+$second-font-family: 'posterizer_kg_rough', sans-serif;
 $global-font-size: 8px;
 $body-font-size: 2rem;
 $global-line-height: 1.5;
@@ -10,10 +10,10 @@ $font-smooth: antialiased;
 
 //Colors
 $colors: (
-	primary: hsl(34, 97, 47),
-	secondary: hsl(212,73,60),
-	third: hsl(309,100,80),
-	text: hsl(0,0,16),
+	primary: hsl(38, 99, 52),
+	secondary: hsl(37,56,84),
+	third: hsl(37,96,11),
+	text: hsl(0,0,100),
 	accept: hsl(90,45,45),
 	alert: hsl(0,100,70),
 	white: hsl(0,0,100),
@@ -48,6 +48,6 @@ $paragraph-lineheight: 1.5;
 
 $header-font-family: $second-font-family;
 $header-font-weight: normal;
-$header-color: $body-font-color;
+$header-color: ac(primary);
 $header-text-transform: uppercase;
 $header-lineheight: 1.2;

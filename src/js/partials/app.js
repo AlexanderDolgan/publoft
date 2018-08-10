@@ -21,24 +21,15 @@ $(document).ready(function(){
 	$('.close-btn').on('click', function() {
 		$('body').removeClass('no-scroll');
 		$('.nav-mob').removeClass('active-nav');
-	});
-
-	$(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-    if (scroll > 0) {
-			$('.nav-screen').addClass('is-sticky');
-			// $('.sticky').css('background-color', 'white');
-			// $('.sticky ul li a').css('color', '#292929');
-    } else {
-			$('.nav-screen').removeClass('is-sticky');
-			// $('.sticky').css('background-color', 'transparent');
-			// $('.sticky ul li a').css('color', 'white');
-		}
-	}); //missing );
-
-	// $('.menu-category').mouseenter( function() {
-	// 	$('.menu-content-nav').stop().addClass('menu-content-nav-active');
-	// });
+    });
+    
+    $(".nav-screen").hover(
+        function(){
+            $( this ).stop().removeClass('nav-screen-hidden');
+        }, function() {
+            $( this ).stop().addClass('nav-screen-hidden');
+        }
+    );
 
 });
 

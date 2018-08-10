@@ -5,82 +5,174 @@
 @media (min-width: $b-large) {
 	.nav-screen {
 		display: block;
-		width: 100%;
-		height: 10rem;
 		position: fixed;
-		transition: .33s background-color ease-in-out;
+		width: 25rem;
+		height: 100vh;
+		background: ac(secondary);
+		background: linear-gradient(to bottom, rgba(237,219,189,1) 0%, rgba(216,192,149,1) 100%); 
 		z-index: 99;
+		transition: .33s left ease-in-out;
 	}
 	
 	.nav-screen .wrapper {
 		display: flex;
-		flex-flow: row nowrap;
+		flex-flow: column nowrap;
 		align-items: center;
 		justify-content: space-between;
-		@include container(2rem, 2rem);
+		@include container(4rem, 4rem);
+		padding-left: 4rem !important;
 	}
 
-
-	.nav-screen .logo img {
-		width: 26rem;
+	.nav-screen nav {
+		width: 100%;
 	}
-
+	
 	.nav-screen nav ul {
-		display: inline-block;
 		margin: 0;
-		margin-right: 2rem;
+		margin-top: 6rem;
 		padding: 0;
 		list-style: none;
 	}
 	
 	.nav-screen nav ul li {
-		display: inline-block;
-		& a {
-			position: relative;
+		display: block;
+		width: 100%;
+		position: relative;
+		&:first-child {
+			margin-top: 0;
+		}
+		&:nth-child(1)::after {
+			content: '';
+			position: absolute;
 			display: block;
-			padding: .5rem 1rem;
-			font-size: 2rem;
-			font-family: 'girottbold', sans-serif;
-			text-transform: uppercase;
-			color: ac(white);
-			transition: color .2s ease-in;
-			&:hover {
-				text-decoration: none;
-				color: ac(secondary);
-			}
-			&::after {
-				content: '';
-				position: absolute;
-				display: block;
-				bottom: 0;
-				left: 10%;
-				width: 0;
-				border-bottom: .3rem solid ac(primary);
-				transition: width .33s ease-in, left, .33s;
-			}
+			@include retina-sprite($ic-home-group);
+			right: 0rem;
+			top: -.75rem;
+		}
+		&:nth-child(2)::after {
+			content: '';
+			position: absolute;
+			display: block;
+			@include retina-sprite($ic-restaurant-menu-group);
+			right: 0rem;
+			top: -.75rem;
+		}
+		&:nth-child(3)::after {
+			content: '';
+			position: absolute;
+			display: block;
+			@include retina-sprite($ic-dashboard-group);
+			right: 0rem;
+			top: -.75rem;
+		}
+		&:nth-child(4)::after {
+			content: '';
+			position: absolute;
+			display: block;
+			@include retina-sprite($ic-subject-group);
+			right: 0rem;
+			top: -.75rem;
+		}
+		&:nth-child(5)::after {
+			content: '';
+			position: absolute;
+			display: block;
+			@include retina-sprite($ic-place-group);
+			right: 0rem;
+			top: -.75rem;
 		}
 		&:hover a::after {
-			width: 80%;
-			left: 10%;
+			width: 60%;
+			left: 0;
+		}
+	}
+
+	.nav-screen ul li a {
+		display: block;
+		margin-top: 3rem;
+		font-size: 1.6rem;
+		font-family: $second-font-family;
+		text-transform: uppercase;
+		color: ac(third);
+		transition: color .2s ease-in;
+		&:hover {
+			text-decoration: none;
+			color: ac(third);
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			display: block;
+			bottom: 0;
+			left: 0;
+			width: 0;
+			border-bottom: .3rem solid ac(third);
+			transition: width .33s ease-in, left, .33s;
 		}
 	}
 	
 	.nav-screen nav ul .current_page_item a::after {
-		width: 80%;
-		left: 10%;
+		width: 60%;
+		left: 0;
 	}
 	
 	.nav-screen .social {
-		display: inline-block;
-		vertical-align: middle;
+		width: 100%;
+		border-top: .2rem solid ac(third);
+		padding-top: 4rem;
+		margin-top: 4rem;
+		& a {
+			color: ac(third);
+			font-family: $second-font-family;
+			text-transform: uppercase;
+			font-size: 1.5rem;
+			&:nth-child(2) {
+				margin-top: 2rem;
+			}
+		}
 		& .ic-fb {
-			display: inline-block;
-			padding-right: 4rem;
-			@include retina-sprite($ic-facebook-p-group);
+			position: relative;
+			display: block;
+			& span:after {
+				content: '';
+				display: block;
+				@include retina-sprite($ic-facebook-group);
+				position: absolute;
+				right: 0rem;
+				top: -.75rem;
+			}
 		}
 		& .ic-in {
-			display: inline-block;
-			@include retina-sprite($ic-instagram-p-group);
+			position: relative;
+			display: block;
+			margin-top: 1rem;
+			& span:after {
+				content: '';
+				display: block;
+				@include retina-sprite($ic-instagram-group);
+				position: absolute;
+				right: 0rem;
+				top: -.75rem;
+			}
+		}
+	}
+	.nav-screen .logo {
+		margin-top: 8rem;
+		margin-left: -15%;
+	}
+}
+
+@media (min-width: $b-large) {
+	.nav-screen-hidden {
+		left: -18.5rem;
+	}
+	.nav-screen-hidden .social {
+		border: none;
+	}
+	.nav-screen-hidden .logo {
+		margin-left: 16rem;
+		& img {
+			width: 5rem;
 		}
 	}
 }

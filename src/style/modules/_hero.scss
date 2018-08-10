@@ -42,7 +42,7 @@
 	}
 	& .hero-anchor {
 		display: block;
-		@include retina-sprite($ic-chevron-down-group);
+		// @include retina-sprite($ic-chevron-down-group);
 		margin: 0 auto;
 		margin-top: 2rem;
 	}

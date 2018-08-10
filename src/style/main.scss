@@ -6,24 +6,24 @@ Version: 1.0
 */
 
 @font-face {
-	font-family: 'girottbold';
-	src: url('../fonts/girott_bold.otf');
+	font-family: 'PFDinTextCompPro-Regular';
+	src: url('/fonts/PFDinTextCompPro-Regular_35392.ttf');
 }
 
 @font-face {
-	font-family: 'grotesque';
-	src: url('../fonts/basisgrotesquepro-regular.woff');
+	font-family: 'PFDinTextCompPro-Medium_35390';
+	src: url('/fonts/PFDinTextCompPro-Medium_35390.ttf');
 }
 
 @font-face {
-	font-family: 'grotesque-bold';
-	src: url('../fonts/basisgrotesquepro-bold.woff');
+	font-family: 'posterizer_kg_rough';
+	src: url('/fonts/Posterizer_KG_Rough.otf');
 }
 
 //settings-var
-@import "util/settings";
-@import "util/mixin";
 @import "util/function";
+@import "util/mixin";
+@import "util/settings";
 //sprites
 @import "util/sprite";
 
