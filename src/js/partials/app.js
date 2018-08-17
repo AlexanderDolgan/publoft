@@ -25,9 +25,11 @@ $(document).ready(function(){
     
     $(".nav-screen").hover(
         function(){
-            $( this ).stop().removeClass('nav-screen-hidden');
+            $( this ).stop().css('left', '0');
+            $('.container').stop().css('margin-left', '25rem');
         }, function() {
-            $( this ).stop().addClass('nav-screen-hidden');
+            $( this ).stop().css('left', '-18rem');
+            $('.container').stop().css('margin-left', '8rem');
         }
     );
 
@@ -40,7 +42,7 @@ function init() {
 
     ////YandexApi map
     var megobariMap = new ymaps.Map("map", {
-            center: [55.757921, 37.636778], //megobari
+            center: [55.689253, 37.294798], //megobari
             zoom: 17,
 
             //убрать кнопки управления
@@ -53,7 +55,7 @@ function init() {
             // Описание геометрии
             geometry: {
                 type: "Point",
-                coordinates: [55.757921, 37.636778]
+                coordinates: [55.689253, 37.294798]
             }
         });
 

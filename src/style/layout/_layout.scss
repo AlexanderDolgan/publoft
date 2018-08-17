@@ -6,10 +6,28 @@
 
 //content container
 .container {
-	@include container(0, 0);
+	@include container(8rem);
+	transition: .33s margin ease-in-out;
 }
+
+// @media (min-width: $b-large) {
+// 	.container {
+// 		@include container(8rem)
+// 	}
+// }
 
 //content container vertical padding
 .container-padding {
 	@include container;
+}
+
+#site-main {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	min-width: 100%;
+	min-height: 100%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }

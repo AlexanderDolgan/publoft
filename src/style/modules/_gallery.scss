@@ -1,25 +1,12 @@
 //Галерея
 .gallery {
-	@include container();
-	padding-right: .25rem;
-	padding-left: .25rem;
-	& h2 {
-		text-align: center;
-		&::after {
-			content: '';
-			display: block;
-			width: 40%;
-			height: 0.2rem;
-			background-color: ac(primary);
-			margin: 0 auto;
-			margin-top: 2rem;
-		}
-	}
+	padding: 0 1rem;
 }
 
 .gallery-wrapper {
 	display: flex;
 	flex-flow: row wrap;
+	margin-top: 2rem;
 	&-item {
 		width: percentage(6/12);
 		padding: 0.25rem;

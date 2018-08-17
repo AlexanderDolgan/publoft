@@ -1,20 +1,31 @@
 include partials/head
 body
 	#site-wrapper
-		include partials/site-header-inside
+		include partials/site-header
 
 		section#site-main
-			.contacts
-				address
-					ul
-						li: a(href="#") Адрес: г. Москва, Тверская, 36
-						li: a(href="tel:+74957655256") Телефон: +7 (495) 765-52-56
-						li: a(href="mailto:e-mail: info@grossmetall.ru") e-mail: info@grossmetall.ru
-				.social
-					a(href="//www.facebook.com/megobari15/" target="_blank").ic-fb
-					a(href="//www.instagram.com/megobari.wine/" target="_blank").ic-in
-					
-				#map
+			.container
+				.contacts
+					header
+						h1 Контакты
+					address
+						h3 Адрес
+						ul
+							li: a(href="#") Адрес: г. Одинцово, ул. Говорова 9А
+							li: a(href="tel:+74957731182") Телефон: +7 (495) 773-11-82
+							li: a(href="mailto:e-mail: info@publoft.ru") e-mail: info@publoft.ru
+					.time
+						h3 График работы
+						ul
+							li 
+								span пн-чт с 12:00 до 00:00
+								span пт с 12:00 до 04:00
+							li 
+								span сб с 14:00 до 04:00 
+								span вс с 14:00 до 00:00
+					#map
+					.link
+						a(href="#") Открыть на яндекс картах
 
 		section#site-footer
 			include partials/site-footer

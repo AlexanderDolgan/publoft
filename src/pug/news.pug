@@ -1,14 +1,17 @@
 include partials/head
 body
 	#site-wrapper
-		include partials/site-header-inside
+		include partials/site-header
 
 		section#site-main
-		.news-wrapper
-			include partials/news-item
-			include partials/news-item
-			include partials/news-item
-			
+			.container
+				.contacts
+					header
+						h1 Новости
+					.news-items
+						include partials/news-item 
+						include partials/news-item 
+						include partials/news-item 
 
 		section#site-footer
 			include partials/site-footer

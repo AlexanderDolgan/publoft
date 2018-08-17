@@ -1,38 +1,55 @@
 include partials/head
 body
 	#site-wrapper
-		include partials/site-header-inside
+		include partials/site-header
 
 		section#site-main
-			.menu-category
-				ul
-					li: a(href="#").menu-category-btn: h2.kitchen Кухня
-					li: a(href="#").menu-category-btn: h2.bar Бар
-			.menu
-				.menu-content
-					ul.menu-content-nav
-						li 
-							a(href="#") Холодные закуски
-						li
-							a(href="#") Выпечка
-						li
-							a(href="#") Хинкали
-						li
-							a(href="#") Чебуреки
-						li 
-							a(href="#") Супы
-						li
-							a(href="#") Горячие блюда
-						li
-							a(href="#") Мангал
-						li
-							a(href="#") Гарниры
-						li
-							a(href="#") Соусы
-						li
-							a(href="#") Десерты
+			.container
+				.menu
+					header
+						h1 Меню
+					ul.menu-nav
+						li Основное
+							ul
+								li 
+									a(href="#") Холодные закуски
+								li
+									a(href="#") Выпечка
+								li
+									a(href="#") Хинкали
+								li
+									a(href="#") Чебуреки
+								li 
+									a(href="#") Супы
+								li
+									a(href="#") Горячие блюда
+								li
+									a(href="#") Мангал
+								li
+									a(href="#") Гарниры
+								li
+									a(href="#") Соусы
+								li
+									a(href="#") Десерты
+						li Алкоголь
+							ul
+								li 
+									a(href="#") Холодные закуски
+								li
+									a(href="#") Выпечка
+								li
+									a(href="#") Хинкали
+						li Напитки
+							ul
+								li 
+									a(href="#") Холодные закуски
+								li
+									a(href="#") Выпечка
+								li
+									a(href="#") Хинкали
+
 					.menu-item
-						
+						h4 Холодные закуски
 
 		section#site-footer
 			include partials/site-footer

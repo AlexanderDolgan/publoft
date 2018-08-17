@@ -20,17 +20,18 @@ body {
 	font-family: $global-font-family;
 	line-height: $global-line-height;
 	color: ac(text);
-	background-color: $body-background;
+	background: $body-background;
 	-webkit-font-smoothing: $font-smooth;
+	letter-spacing: .1rem;
 }
 
 a {
 	text-decoration: none;
-	color: ac(secondary);
+	color: ac(primary);
 	&:hover,
 	&:active,
 	&:focus {
-		color: ac(third);
+		color: ac(secondary);
 		text-decoration: underline;
 	}
 }
@@ -71,6 +72,10 @@ h3 {font-size: 20px;}
 h4 {font-size: 16px;}
 h5 {font-size: 14px;}
 h6 {font-size: 14px;}
+
+h3 {
+	color: ac(white);
+}
 
 //Bloquote
 blockquote {

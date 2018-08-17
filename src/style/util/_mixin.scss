@@ -11,10 +11,12 @@
 @mixin container ($pad-vert-small:4rem, $pad-vert:8rem, $max-width: $container) {
 	position: relative;
 	width: 100%;
-	max-width: $max-width;
+	height: 100%;
 	margin: 0 auto;
+	max-width: $max-width;
 	padding: $pad-vert-small 0;
 	@media (min-width: $b-large) {
+		margin: 0 0 0 8rem;
 		padding: $pad-vert 2rem;
 	}
 	// @include clearfix;

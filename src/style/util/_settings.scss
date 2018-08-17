@@ -22,7 +22,7 @@ $colors: (
 	lightgray: hsl(0,0,94)
 );
 
-$body-background: ac(white);
+$body-background: linear-gradient(to right, #05122C, ac(black));
 $body-font-color: ac(text);
 
 // Media q breakpoints
@@ -40,7 +40,7 @@ $b-medium-only: 320px 959px;
 $b-large-only: 960px;
 
 //container width
-$container: 1080px;
+$container: 768px;
 
 //Typography
 
@@ -49,5 +49,5 @@ $paragraph-lineheight: 1.5;
 $header-font-family: $second-font-family;
 $header-font-weight: normal;
 $header-color: ac(primary);
-$header-text-transform: uppercase;
+$header-text-transform: inherit;
 $header-lineheight: 1.2;
